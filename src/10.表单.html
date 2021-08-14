@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单学习</title>
+</head>
+<body>
+
+<h1>账户注册</h1>
+
+<!--表单form
+action: 表单提交的位置，可以是网站，也可以是一个请求处理地址
+method: post,get
+    get :可以在url中看到提交的信息，不安全
+    post: 比较安全，可以提交大文件
+-->
+
+<form action="1.我的第一个网页.html" method="post">
+    <!--input 文本输入框
+    type： 形式（默认text）
+    value：默认初始值
+    readonly： 只读
+    disabled： 禁用
+    hidden： 隐藏
+    placeholder 输入提示
+    required 非空判断
+    pattern 正则表达式
+    maxlength： 最大输入字符长度
+    size： 文本框长度
+    -->
+
+    <p>
+        <label><!--标签label增强鼠标可用性，点击文字可以跳转到框-->
+            用户名:
+            <input type="text" name="username" value="admin" readonly>
+        </label>
+    </p>
+
+    <!--密码输入框password-->
+    <p>
+        <label>
+            密码：
+            <input type="password" name="password" placeholder="请输入密码" required>
+        </label>
+    </p>
+
+    <!--单选框radio（name表示组，当多个radio的name相同时形成单选-->
+    <p>
+        <label>
+            <input type="radio" value="boy" name="sex">
+            男
+        </label>
+
+        <label>
+            <input type="radio" value="girl" name="sex">
+            女
+        </label>
+    </p>
+
+    <!--多选框checkbox(name是组）-->
+    <p>
+        爱好：
+        <label>
+            <input type="checkbox" value="eat" name="hobby">吃
+        </label>
+
+        <label>
+            <input type="checkbox" value="drink" name="hobby">喝
+        </label>
+
+        <label>
+            <input type="checkbox" value="sleep" name="hobby">睡
+        </label>
+
+        <label>
+            <input type="checkbox" value="play" name="hobby">玩
+        </label>
+    </p>
+
+    <!--普通按钮button，图片按钮image（会自动提交后跳转到action）-->
+    <p>
+        <input type="button" value="这是一个按钮" name="button1">
+        <input type="image" src="../resource/img/下载.jpg" alt="这是一个按钮">
+    </p>
+
+    <!--下拉框select-->
+    <p>
+        <label>
+            国籍：
+            <select name=国籍>
+                <option value="China">中国</option>
+                <option value="US">美国</option>
+                <option value="UK">英国</option>
+                <option value="Russia">俄罗斯</option>
+            </select>
+        </label>
+    </p>
+
+    <!--文本域textarea-->
+    <p>
+        <label>
+            反馈信息：
+            <textarea name="Back Information" cols="30" rows="10">请输入您的反馈</textarea>
+        </label>
+    </p>
+
+    <!--文件域file-->
+    <p>
+        <input type="file" name="files">
+    </p>
+
+    <!--邮箱验证-->
+    <p>
+        <label>
+            邮箱：
+            <input type="email" name="email">
+        </label>
+    </p>
+
+    <!--URL验证-->
+    <p>
+        <label>
+            网址：
+            <input type="url" name="url">
+        </label>
+    </p>
+
+    <!--数字-->
+    <p>
+        <label>
+            商品数量：
+            <input type="number" name="number" max="100" min="0" step="10">
+        </label>
+    </p>
+
+    <!--滑块-->
+    <p>
+        <label>
+            音量
+            <input type="range" name="volume" max="100" min="0" step="any">
+        </label>
+    </p>
+
+    <!--搜索框-->
+    <p>
+        <label>
+            <input type="search" name="search">
+        </label>
+    </p>
+
+    <!--submit提交，reset重置-->
+    <p>
+        <input type="submit">
+        <input type="reset">
+    </p>
+
+
+</form>
+
+
+
+</body>
+</html>
